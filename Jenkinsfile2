@@ -7,9 +7,8 @@ pipeline{
       agent any
         
         stages{
-
               stage('maven build'){
-                  echo 'Maven Success'  
+                    
                  }	
                  
                  stage ('Check logs') {
