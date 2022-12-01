@@ -1,17 +1,22 @@
 #!/usr/bin/env groovy
 
-
+@Library('shared-libraryL@main') _ //master or whatever branch
 
 pipeline{
 
-      agent any
+      agent {
+                docker {
+                image 'maven:3-openjdk-11'
+                args '-v $HOME/.m2:/root/.m2'
+                }
+            }
         
         stages{
 
               stage('maven build'){
                   steps{
                       script{
-		    	                sh "mvn -f $WORKSPACE/pom.xml clean install"
+		    	                sh "mvn clean install"
                       	  }
                	     }  
                  }	
