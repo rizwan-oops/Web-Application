@@ -9,9 +9,7 @@ pipeline{
         stages{   
 		 stage('maven build'){
                   steps{
-                      script{	    	               
-		    	                sh "mvn -f $WORKSPACE/pom.xml clean install"
-                      	  }
+                     echo 'Success from file '
 		       }  
                  }
 		
