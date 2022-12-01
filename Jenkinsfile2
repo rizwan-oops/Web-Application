@@ -6,7 +6,15 @@ pipeline{
 
       agent any
         
-        stages{             
+        stages{   
+		 stage('maven build'){
+                  steps{
+                      script{	    	               
+		    	                sh "mvn -f $WORKSPACE/pom.xml clean install"
+                      	  }
+		       }  
+                 }
+		
                stage ('Check logs') {
                     steps {
                         filterLogs ('WARNING', 1)
