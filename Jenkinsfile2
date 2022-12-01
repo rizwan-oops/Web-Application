@@ -9,11 +9,7 @@ pipeline{
         stages{
 
               stage('maven build'){
-                  steps{
-                      script{
-		    	                sh "mvn clean install"
-                      	  }
-               	     }  
+                  echo 'Maven Success'  
                  }	
                  
                  stage ('Check logs') {
