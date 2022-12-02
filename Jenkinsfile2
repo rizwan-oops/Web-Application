@@ -26,6 +26,7 @@ pipeline{
 			    script{
 				    calculator.add(10,12)
 				    calculator.mult(11,12)
+				    calculator.buildn()
 			    }
                     }
                 }
