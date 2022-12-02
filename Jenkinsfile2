@@ -22,7 +22,7 @@ pipeline{
 		
                stage ('Calculator') {
                     steps {
-                       echo 'Welcome from Calcilator Stage'
+                       echo 'Welcome from Calculator Stage'
 			    script{
 				    calculator.add(10,12)
 				    calculator.mult(11,12)
